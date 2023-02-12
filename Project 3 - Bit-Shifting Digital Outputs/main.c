@@ -26,8 +26,13 @@ int main(void)
 		{
 			PORTB  = 0x01 << i;
 			_delay_ms(TIME_DELAY);
-		}			
-		
+		}		
+        for(i = 1 ; i < 7 ; i++)
+		{
+			PORTB = 0x80 >> i;
+			_delay_ms(TIME_DELAY);
+		}
+
 	}
 	
 	return 0;
